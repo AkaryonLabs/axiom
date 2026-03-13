@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axiom | AI Workflows and Technical Support</title>
+  <meta
+    name="description"
+    content="Axiom builds practical AI workflows, tech setup, and on-site support for small businesses."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a class="brand" href="#top" aria-label="Axiom home">
+          <img src="assets/logo.png" alt="Axiom logo">
+        </a>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#book">Book</a>
+          <a href="#pay">Pay</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section class="hero-content">
+        <p class="eyebrow">Small Business AI and Tech Support</p>
+        <h1>Set up practical AI, automation, and technical systems for real work.</h1>
+        <p class="hero-copy">
+          Axiom helps local businesses move faster with AI-assisted workflows, device setup,
+          troubleshooting, and technical implementation that stays usable after launch.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#book">Book an Appointment</a>
+          <a class="button button-secondary" href="#pay">Pay Deposit</a>
+        </div>
+      </section>
+      <div class="hero-media">
+        <img src="assets/hero-visual.png" alt="Axiom branded technology workspace">
+      </div>
+    </header>
+
+    <main>
+      <section class="panel panel-grid" id="services">
+        <div>
+          <p class="section-label">Services</p>
+          <h2>Built for local operators who need working systems, not vague promises.</h2>
+        </div>
+        <figure class="feature-image">
+          <img src="assets/service-icons.png" alt="Axiom service icons for AI workflow setup, device setup, technical cleanup, and on-site support">
+        </figure>
+      </section>
+
+      <section class="panel split-panel" id="book">
+        <div class="split-copy">
+          <p class="section-label">Book</p>
+          <h2>Start with a short intake and appointment request.</h2>
+          <p>
+            Use this section to collect the customer name, contact info, business need,
+            preferred date, and location. Replace the temporary form action with your final booking flow later.
+          </p>
+          <ul class="compact-list">
+            <li>Consultations</li>
+            <li>Remote troubleshooting</li>
+            <li>On-site setup</li>
+            <li>AI workflow planning</li>
+          </ul>
+        </div>
+
+        <form class="intake-form" id="intake-form">
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Customer name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="name@example.com" required>
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" placeholder="Best callback number">
+          </label>
+          <label>
+            Service Needed
+            <select name="service" required>
+              <option value="">Choose one</option>
+              <option>AI Workflow Setup</option>
+              <option>Computer and Device Setup</option>
+              <option>Technical Cleanup</option>
+              <option>On-Site Support</option>
+            </select>
+          </label>
+          <label>
+            Project Details
+            <textarea name="details" rows="5" placeholder="What do you need help with?" required></textarea>
+          </label>
+          <button class="button button-primary" type="submit">Save Request</button>
+          <p class="form-note">This demo form stores the request in your browser for now. We can wire it to email, Airtable, or a real backend next.</p>
+        </form>
+      </section>
+
+      <section class="panel pay-panel" id="pay">
+        <div>
+          <p class="section-label">Payments</p>
+          <h2>Take deposits now. Replace placeholders with your Stripe links later.</h2>
+        </div>
+        <div class="payment-grid">
+          <article class="payment-card">
+            <h3>Consult Deposit</h3>
+            <p>Reserve a consultation slot with a paid deposit.</p>
+            <a class="button button-secondary" href="#" data-placeholder="stripe">Add Stripe Payment Link</a>
+          </article>
+          <article class="payment-card">
+            <h3>Service Invoice</h3>
+            <p>Send customers to your Stripe invoice or payment page.</p>
+            <a class="button button-secondary" href="#" data-placeholder="stripe">Add Invoice Link</a>
+          </article>
+          <article class="payment-card">
+            <h3>Custom Quote</h3>
+            <p>Handle larger jobs after review and scope confirmation.</p>
+            <a class="button button-secondary" href="#contact">Request Quote</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel contact-panel" id="contact">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Keep this simple until you lock the final brand details.</h2>
+        </div>
+        <div class="founder-panel">
+          <img src="assets/founder-portrait.png" alt="Founder portrait for Axiom">
+          <div class="founder-copy">
+            <p class="section-label">Founder</p>
+            <h3>Local operator. Technical builder. AI-first where it helps, practical everywhere else.</h3>
+            <p>
+              Use this section for a short founder intro once you want the site to feel more personal and more local.
+              It is already structured for a portrait-led trust section.
+            </p>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Email</h3>
+            <p>you@example.com</p>
+          </article>
+          <article class="contact-card">
+            <h3>Phone</h3>
+            <p>(555) 555-5555</p>
+          </article>
+          <article class="contact-card">
+            <h3>Service Area</h3>
+            <p>Local appointments and remote support</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="placeholder-dialog">
+    <div class="dialog-content">
+      <h3>Stripe Link Placeholder</h3>
+      <p>Replace this button with your real Stripe Payment Link or invoice URL once your account is ready.</p>
+      <button class="button button-primary" id="close-dialog" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
