@@ -1,16 +1,23 @@
 # Axiom Website
 
-Small static website for local testing and later self-hosting.
+Static portfolio website for Axiom.
 
 ## Files
 
-- `index.html` contains the landing page structure
+- `index.html` contains the portfolio structure
 - `styles.css` contains all styles
-- `script.js` handles the demo intake form and placeholder Stripe buttons
+- `script.js` is currently minimal because the site is static
+
+## Current Structure
+
+1. Hero and positioning
+2. Selected work
+3. Systems offered
+4. Working process
+5. Contact section
 
 ## Next Steps
 
-1. Replace placeholder email, phone, and service text with your real business details.
-2. Replace the Stripe placeholder buttons with your actual payment links.
-3. Wire the booking form to email, Airtable, Google Forms, or a backend.
-4. Open `index.html` directly in a browser, or serve the folder with a small local server.
+1. Replace placeholder portfolio copy with real projects as they go live.
+2. Add links to live demos, case studies, or GitHub repos where appropriate.
+3. Point the contact CTA to your preferred intake flow.
