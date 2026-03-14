@@ -31,8 +31,9 @@ body {
 }
 
 .site-shell {
-  width: min(1160px, calc(100% - 32px));
-  margin: 24px auto 48px;
+  width: 100%;
+  margin: 0;
+  padding: 16px 16px 36px;
 }
 
 .hero,
@@ -45,7 +46,8 @@ body {
 }
 
 .hero {
-  padding: 24px;
+  min-height: calc(100vh - 32px);
+  padding: 24px 32px 40px;
   overflow: hidden;
   position: relative;
 }
@@ -120,8 +122,8 @@ h3 {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 72px 0 56px;
-  max-width: 720px;
+  padding: 96px 0 80px;
+  max-width: 860px;
 }
 
 .eyebrow,
@@ -200,12 +202,12 @@ h2 {
 
 main {
   display: grid;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 .panel {
-  padding: 28px;
+  padding: 32px;
 }
 
 .intro-panel,
@@ -248,7 +250,7 @@ main {
 }
 
 .section-heading {
-  max-width: 720px;
+  max-width: 860px;
 }
 
 .feature-card {
@@ -321,7 +323,7 @@ main {
   }
 
   .hero-content {
-    padding-top: 48px;
+    padding-top: 56px;
   }
 
   .topbar {
@@ -341,14 +343,17 @@ main {
 
 @media (max-width: 560px) {
   .site-shell {
-    width: min(100% - 16px, 100%);
-    margin-top: 8px;
+    padding: 8px 8px 24px;
   }
 
   .hero,
   .panel {
     border-radius: 22px;
     padding: 20px;
+  }
+
+  .hero {
+    min-height: calc(100vh - 16px);
   }
 
   h1 {
