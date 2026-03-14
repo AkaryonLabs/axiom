@@ -161,7 +161,9 @@ h2 {
 .portfolio-grid,
 .systems-grid,
 .process-grid,
-.metric-strip {
+.metric-strip,
+.offer-grid,
+.faq-grid {
   display: grid;
   gap: 16px;
 }
@@ -169,6 +171,27 @@ h2 {
 .hero-actions {
   margin-top: 28px;
   grid-template-columns: repeat(auto-fit, minmax(180px, max-content));
+}
+
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-proof span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(10, 23, 58, 0.58);
+  border: 1px solid rgba(147, 183, 255, 0.2);
+  color: #dce8ff;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .button {
@@ -211,10 +234,14 @@ main {
 }
 
 .intro-panel,
+.offer-panel,
 .work-panel,
+.deliverables-panel,
 .systems-panel,
 .process-panel,
-.contact-panel {
+.faq-panel,
+.contact-panel,
+.closing-panel {
   display: grid;
   gap: 24px;
 }
@@ -223,19 +250,63 @@ main {
 .contact-grid,
 .portfolio-grid,
 .systems-grid,
-.process-grid {
+.process-grid,
+.offer-grid,
+.faq-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .metric-card,
+.offer-card,
 .portfolio-card,
 .system-card,
 .process-card,
-.contact-card {
+.contact-card,
+.faq-card,
+.deliverable-card,
+.visual-card {
   background: var(--panel-strong);
   border: 1px solid var(--line);
   border-radius: 22px;
   padding: 20px;
+}
+
+.offer-grid {
+  align-items: stretch;
+}
+
+.offer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -40px -40px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(51, 146, 255, 0.18), transparent 72%);
+  pointer-events: none;
+}
+
+.featured-offer {
+  background: linear-gradient(180deg, rgba(17, 38, 91, 0.92), rgba(12, 22, 54, 0.98));
+}
+
+.offer-kicker {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(39, 97, 199, 0.25);
+  border: 1px solid rgba(155, 192, 255, 0.22);
+  color: #cfe1ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .metric-value,
@@ -282,6 +353,40 @@ main {
   color: var(--ink-soft);
 }
 
+.deliverables-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.deliverable-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.visual-card {
+  padding: 16px;
+  overflow: hidden;
+}
+
+.visual-card img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  margin-bottom: 16px;
+  background: #eef3ff;
+}
+
+.visual-copy h3,
+.offer-card h3,
+.faq-card h3,
+.deliverable-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
 .hero-media {
   position: absolute;
   inset: 0;
@@ -317,8 +422,25 @@ main {
   padding: 24px;
 }
 
+.closing-panel {
+  grid-template-columns: minmax(0, 1.3fr) auto;
+  align-items: center;
+}
+
+.closing-actions {
+  display: grid;
+  gap: 12px;
+  min-width: 240px;
+}
+
 @media (max-width: 860px) {
-  .founder-panel {
+  .founder-panel,
+  .deliverables-layout,
+  .closing-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .deliverable-list {
     grid-template-columns: 1fr;
   }
 
